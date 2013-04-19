@@ -1,0 +1,4 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/usr/local/google/home/georgen/src/goggles17/google3/java/com/google/android/apps/unveil/corelib/jni'
+let g:netrw_dirhist_2='/Users/georgen/git/tmux2/.git'

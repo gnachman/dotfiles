@@ -1,0 +1,58 @@
+# list directories in columns
+alias ls 'ls -sF'
+alias emacs 'emacs -nw'
+alias ssh ssh -x
+
+stty stop ""
+stty start ""
+
+# Remember last 1000 commands
+set history = 1000
+
+# List possibility on ambiguous
+set autolist=1
+set nobeep=1
+
+if ( (! $?ENVONLY) && $?prompt ) then
+	if ( -o /bin/su ) then
+           set prompt='%B%m:%/#%b '
+	else
+           set prompt='%B%m:%/%%%b '
+	endif
+endif
+
+set path=($path /sbin /usr/sbin /usr/local/sbin /usr/local/symlinks /sbin /usr/sbin /usr/local/sbin /usr/local/bin /usr/bin /bin /usr/X11R6/bin /usr/local/bin/g4bin/)
+
+alias more less
+alias bc bc -l
+alias vi vim -X
+
+setenv PAGER less
+
+bindkey "" i-search-back
+bindkey "w" backward-delete-word
+unsetenv autologout
+unset autologout
+unalias rm
+unalias cp
+alias rm rm -f
+alias cp cp -f 
+alias cd.. cd ..
+setenv EDITOR vi
+
+limit coredumpsize 0
+
+# make pushd silent, then alias cd to pushd
+set pushdtohome
+set pushdsilent
+alias cd pushd
+# u= undo cd
+alias u popd
+# Type the name of a dir to cd to it. Sadly, the cd alias doesn't apply to implicit cds.
+set implicitcd
+
+
+set savehist=""
+alias r "pushd /home/georgen/r; R --save; popd"
+
+
