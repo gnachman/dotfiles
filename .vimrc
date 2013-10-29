@@ -129,7 +129,7 @@ endif
 "endfunction
 
 " My commands for editing C code
-"source /home/georgen/.vim/cinsert.vim
+"source /home/gnachman/.vim/cinsert.vim
 set cinoptions=>s,e0,n0,f0,{0,}0,^0,:s,=s,l0,gs,hs,ps,ts,+s,c1,C1,(0,us,\U0,w0,m0,j0,)20,*30
 
 " Enable emacs-style editing of command-line mode
@@ -260,7 +260,7 @@ set errorformat=%f:%l%m
 " i: current and included files
 set complete=.,w,b
 
-set viminfo='20,<50,s10,h,n/Users/georgen/.viminfo
+set viminfo='20,<50,s10,h,n/Users/gnachman/.viminfo
 
 function! Hex2Dec()
   let lstr = getline(".")
